@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+}
+.class{
+    margin-left: 100px;
+}
+ul li {
+    position: absolute;
+    background: chartreuse;
+    color: black;
+    font-size: 34px;
+    display : inline;
+    padding: 2px ;
+}
+ul p{
+    position: relative;;
+    top: 35px;
+    font-size: 27px;
+    display : inline;
+    padding-left :25px;
+}
