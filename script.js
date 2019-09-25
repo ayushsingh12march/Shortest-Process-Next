@@ -20,10 +20,15 @@ var handleChange = () =>{
     var queue  = [];
     var finishBuffTime = 0;
     var minServTime =999 ;
-    // gantt chart starts with the first process which arrives 
-    queue.push(processArray[0]);
-    processArray[0].visited = true;
-    minServTime = parseInt(processArray[0].servTime);
+    // gantt chart starts with the first process which arrives and has least service time 
+    for(let i=0;i<processArray.length;i++){
+        if(processArray[i].arrTime == processArray[0].arrTime){
+            queue.push(processArray[i]);
+            processArray[i].visited = true
+            
+        }
+    }
+  
     while(queue.length!=0){
         minServTime=999
         queue.forEach((task)=>{
